@@ -1,0 +1,241 @@
+.cfm-videoplayer
+{
+	width:100%;
+	position: relative;
+	overflow:hidden;
+	background-color:rgba(240,240,240,1);
+
+	.cfm-videoplayer-inner{
+		padding-bottom: 100%;
+
+		@media( min-width:$tablet-small){ padding-bottom:56.25%; }
+		// @media( min-width:$tablet-large){ padding-bottom:64%; }
+		@media( min-width:$tablet-large){ padding-bottom:56.25%; }
+		@media( min-width:$desktop){ padding-bottom:56.25%; }
+		@media( min-width:$desktop-large){ padding-bottom:52%; }
+	}
+
+	video{
+		position: absolute;
+		top:50%; left:50%;
+		width:auto;
+		height:100%;
+	}
+
+	video.cfm-videoplayer-desktop{
+		z-index: 0;
+		opacity: 0;
+	}
+	
+	.cfm-videoplayer-poster{
+		opacity: 0;
+		position: absolute;
+		top:0; left:0;
+		width:100%;
+		height:100%;
+		background-color:rgba(250,250,250,1);
+		background-position:center center;
+		background-size:cover;
+		background-repeat:no-repeat;
+		z-index: 1;
+		cursor:pointer;
+
+		@include prefix(transition, opacity 500ms);
+
+		.cfm-videoplayer-poster-header{
+			.cfm-videoplayer-poster-header-inner{
+				h1,h2,h3{
+					margin:0 0 10px 0;
+					font-family:"gotham-light";
+				}
+
+				p{
+					margin:4px 0 10px 0;
+				}
+
+				.page-header-description{
+					@media( min-width:$desktop){
+				    	@include prefix("column-count", 2);
+				    	@include prefix("column-gap", 40px);
+					}
+
+					p{
+						@include prefix("column-break-inside", "avoid");
+						margin:0 0 10px 0;
+					}
+				}
+			}
+		}
+
+		.cfm-videoplayer-playbutton{
+			background:#fff;
+			position: absolute;
+			width: 80px; height:80px;
+			background:#FFF;
+			top: 50%; left: 50%;
+			border-radius:50%;
+			margin:-40px 0 0 -40px;
+
+			span.arrow{
+				width: 0; height: 0; 
+				position: absolute;
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid transparent;
+				border-left: 30px solid #111;
+				margin-left: -10px;
+				top: 50%; left:50%;
+				margin-top: -20px;
+			}
+		}
+
+		&:hover{
+			.cfm-videoplayer-playbutton{
+				background:#111;
+
+				span.arrow{
+					border-left: 30px solid #FFF;
+				}
+			}
+		}
+	}
+
+	video.cfm-videoplayer-mobile{
+		opacity: 0; z-index: 4; width:100%; height:100%;
+		top:0; left:0; margin:0;
+
+		@include prefix(transition, opacity 500ms);
+	}
+
+	div.cfm-video-controls{
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		opacity: 0;
+
+		@include prefix(transition, opacity 500ms);
+
+		ul{
+			position: absolute;
+			bottom:30px; left:0;
+			line-height: 0;
+			list-style: none;
+			margin:0;padding:0;
+			width:100%;
+
+			li.cfm-video-btn{
+				background-color: rgba(250,250,250,.4);
+				line-height: 0;
+				margin:0; padding:0;
+				width: 40px; height:40px; 
+				float:right; margin-right:4px;
+
+				&:first-child{
+					float: left;
+				}
+
+				&.cfm-video-play-pause-btn{
+					margin-left: 20px; 
+					background-image: url("../img/play-pause-icon.png");
+
+					@media( min-width:$tablet-small){ margin-left: 40px }
+					@media( min-width:$desktop){ margin-left: 80px }
+				}
+				&.cfm-video-mute-btn{
+					background-image: url("../img/mute-icon.png");
+				}
+				&.cfm-video-fullscreen-btn{
+					background-image: url("../img/fullscreen-icon.png");
+					margin-right: 20px;
+
+					@media( min-width:$tablet-small){ margin-right: 40px }
+					@media( min-width:$desktop){ margin-right: 80px }
+				}
+				&.active{
+					background-position-x: -40px
+				}
+				&:hover{
+					background-position-y: -40px;
+				}
+			}
+		}
+
+		.cfm-video-progress-container{
+			line-height: 0;
+			margin:0; padding:0;
+			height: 20px; width: 100%;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-image: linear-gradient( rgba(255,255,255,.2), rgba(255,255,255,.2) );
+			background-size: 0 20px;
+
+			.cfm-video-seek-bar-input{
+				background-color:#FFF;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+			}
+
+			.cfm-video-seek-bar{
+				display: block;
+				position: absolute;
+				top:0; left: 0;
+				width: 0; height: 100%;
+				background-color: #FFF;
+			}
+		}
+	}
+
+	&.ready{
+		.cfm-videoplayer-poster{
+			opacity: 1;
+		}
+	}
+
+	&.autoplay{
+		.cfm-videoplayer-poster{
+			opacity: 0;
+		}
+	}
+
+	&.playing{
+		video{
+			opacity: 1;
+		}
+
+		.cfm-videoplayer-poster{
+			opacity: 0;
+			z-index:-1;
+		}
+	}
+
+	&.paused{
+		.cfm-videoplayer-poster{
+			z-index:-1;
+		}
+
+		div.cfm-video-controls{
+			opacity: 1;
+		}
+
+		video.cfm-videoplayer-desktop{
+			opacity: 1;
+		}
+	}
+}
+
+.mobile{
+	.cfm-videoplayer{
+		.cfm-videoplayer-poster{
+			z-index: 1 !important;
+			opacity: 1 !important;
+		}
+
+		div.cfm-video-controls{
+			display: none;
+		}
+	}
+}
+
+
+

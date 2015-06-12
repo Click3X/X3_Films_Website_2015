@@ -1,0 +1,1 @@
+<div class="project-module-image" data-image="http://media.click3x.com/images/cfm/modules/banner-image/<?php echo $module->media[0]->filename; ?>.jpg" id="<?php echo ($data->slug . '-' . $module->module_id) ?>"></div>

@@ -1,0 +1,77 @@
+/**
+ * Home Page Styles
+ */
+
+  div#home-page{
+ 	div.cfm-project-gallery{
+		ul{
+	 		li{
+				div.project-inner{
+		 			a{
+		 				div.project-label{
+		 					div.project-label-inner{
+		 						h3{
+		 						}
+		 					}
+		 				}
+
+		 				&:hover{
+		 					div.project-label{
+			 					div.project-label-inner{
+			 					}
+			 				}
+		 				}
+	 				}	
+	 			}
+	 		}
+	 	}
+	 }
+	 #reel-video.section-header{
+	 	background-color:#eee;
+
+	 	h3{
+	 		color: #aaa;
+	 	}
+	 }
+	 #reel-videoplayer.cfm-videoplayer{
+		video{
+			background:rgba(240,240,240,.5);
+			color:#555;
+		}
+
+		.cfm-videoplayer-poster{
+			background-color: #FFF;
+			background-size:0 0;
+			background-position:center center;
+
+			@media(min-width:$tablet-large){
+				background-size:initial;
+			}
+
+			.cfm-videoplayer-playbutton{
+				border:1px solid $cfmred;
+
+				span.arrow{
+					border-left-color: $cfmred;
+				}
+			}
+
+			&:hover{
+				.cfm-videoplayer-playbutton{
+					border:1px solid #555;
+					background-color:#FFF;
+					
+					span.arrow{
+						border-left-color: #555;
+					}
+				}
+			}
+		}
+	}
+}
+
+html:not(.mobile){
+	#home-page{
+	 	
+ 	}
+}

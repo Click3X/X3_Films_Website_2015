@@ -1,0 +1,36 @@
+/* ==========================================================================
+    Includes. Don't add css here.
+========================================================================== */
+
+@import 'variables.scss';
+@import 'normalize.scss';
+@import 'helpers.scss';
+@import 'debug.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'print.scss';
+
+/** -------------------- 
+Modules -----------------
+---------------------**/
+@import 'boilerplate_modules/navigation.scss';
+@import 'boilerplate_modules/project_gallery.scss';
+@import 'boilerplate_modules/slider.scss';
+@import 'boilerplate_modules/hamburger.scss';
+@import 'boilerplate_modules/videoplayer.scss';
+@import 'boilerplate_modules/bg_image.scss';
+
+@import 'base.scss';
+
+/** -------------------- 
+Pages ------------------
+---------------------**/
+@import 'pages/home.scss';
+@import 'pages/about.scss';
+@import 'pages/projects.scss';
+@import 'pages/clients.scss';
+@import 'pages/contact.scss';
+@import 'pages/project.scss';
+@import 'pages/people.scss';
+
+

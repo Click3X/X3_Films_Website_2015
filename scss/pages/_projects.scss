@@ -1,0 +1,24 @@
+/**
+ * Work Page Styles
+ */
+
+ div#projects-page, div#casestudies-page{
+	.cfm-project-gallery{
+		ul{
+	 		li{
+ 				@media( min-width:$desktop-large){ width:25%; }
+
+				div.project-inner{
+		 			a.cfm-project{
+		 				.project-label{
+		 					.project-label-inner{
+		 						h4{
+		 						}
+		 					}
+		 				}
+		 			}
+		 		}
+		 	}
+		 }
+	}
+}
