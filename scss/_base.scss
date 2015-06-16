@@ -7,7 +7,7 @@ html{
 	font-weight:200;
 	font-size: 19px;
 	line-height:34px;
-	background-color:#333;
+	background-color:#fff;
 	height:100%;
 	overflow:auto;
 	height: auto;
@@ -87,11 +87,13 @@ a:hover{
 }
 
 #header-container{
-	position:fixed;
+	// position:fixed;
 	width:100%;
 	top:0;
-	background:$cfmred;
+	// background:$cfmred;
+	background: transparent;
 	z-index:6;
+	border-top: 25px solid $cfmred;
 
 	@include clearfix();
 
@@ -100,14 +102,14 @@ a:hover{
 		padding:0 4px 0 20px;
 
 		@media( min-width:$tablet-small){
-			padding:0 24px 0 40px;
+			padding:0 40px 0 40px;
 		}
 	}
 
 	div#page-labels{
 		font-family: "gotham-light";
 		margin-top:2px;
-		float: right;
+		float: left;
 		height: 48px;
 		overflow: hidden;
 		display: none;
@@ -143,24 +145,57 @@ a:hover{
 			}
 		}
 	}
-	div.logo{
-		position: relative;
-		margin: 13px 12px 14px 0;
-		float: left;
-		width: 210px;
-		height: 27px;
+}
 
-		a{
-			position: absolute;
-			left:0; top:0;
-			width:100%; height: 100%;
-			background-image: url( ../img/cfm_logo_1x.png );
-			background-repeat:no-repeat;
-			background-size: 210px 27px;
+div.logo-white, div.logo-black{
+	position: relative;
+	// margin: 13px 12px 14px 0;
+	// float: left;
+	width: 98px;
+	height: 141px;
+	margin: auto;
+	// z-index: 10;
+	
 
-			@include image-2x( "../img/cfm_logo_2x.png", 210px, 27px );
-		}
+	a{
+		position: absolute;
+		left:0; top:0;
+		width:100%; height: 100%;
+		background-repeat:no-repeat;
+		background-size: 98px 141px;
+
+		// @include image-2x( "../img/cfm_logo_2x.png", 210px, 27px );
 	}
+}
+
+div.logo-white {
+	a {
+		background-image: url( ../img/x3_logo_white.png );
+	}
+
+	margin-top: 0;
+}
+
+div.logo-black {
+	a {
+		background-image: url( ../img/x3_logo_black.png );
+	}
+
+	margin-top: 20px;
+}
+
+div.title-label {
+	text-transform: uppercase;
+	font-family: 'gotham-book';
+	text-align: center;
+	margin: 40px auto 0 auto;
+}
+
+.label-line {
+	border-top: 2px solid #111;
+	width: 40px;
+	display: inline-block;
+	height: 10px;
 }
 
 .line-arrow{
@@ -186,7 +221,7 @@ a:hover{
 
 #page-container{
 	opacity:0;
-	padding-top:54px;
+	// padding-top:54px;
 	background-color:#FFF;
 
 	.page-header-navigation, .page-footer-navigation{
@@ -229,34 +264,24 @@ a:hover{
 	}
 
 	.page-header{
-		padding:40px 20px 40px 20px;
+		padding:20px;
 
 		@media( min-width:$tablet-small){
-			padding:60px 40px 60px 40px;
+			padding:20px 80px;
 		}
 
 		@media( min-width:$tablet-large){
-			padding:70px 80px 70px 80px;
+			padding:20px 120px;
 		}
-
-		@media( min-width:$desktop){
-			padding:80px 80px 80px 80px;
-		}
-
-		@media( min-width:$desktop-large){
-			padding:70px 80px 70px 80px;
-		}
-
-		background-color:#FFF;
 
 		.page-header-inner{
 			h1,h2,h3{
-				margin:0 0 50px 0;
-				font-family:"gotham-light";
+				margin:0 0 20px 0;
+				font-family:"gotham-book";
 			}
 
 			p{
-				margin:4px 0 20px 0;
+				margin:4px 0 30px 0;
 			}
 
 			.page-header-description{
@@ -277,20 +302,31 @@ a:hover{
 #footer-container{
 	background-color: $cfmred;
 	font-family: 'gotham-book';
-	font-size: 0.8em;
+	font-size: 0.75em;
 	text-transform: uppercase;
- 	padding:90px 0 90px 0;
- 	text-align: center;
+ 	padding: 20px 30px 10px 30px;
  	position: relative;
- 	color:$white;
+ 	color:#fff;
  	opacity: 0;
 
+
  	a{
- 		color:$white;
+ 		color:#fff;
+ 		text-decoration: none;
  	}
 
  	p{
  		line-height:27px;
+ 		display: inline-block;
+ 		padding: 0 20px;
+ 		vertical-align: top;
+ 	}
+
+ 	.social-navigation {
+ 		display: inline-block;
+ 		margin-top: 10px;
+ 		position: absolute;
+  		right: 30px;
  	}
 
  	.cfm-logo-footer{
@@ -300,7 +336,28 @@ a:hover{
  		background:url(../img/x3_logo_footer.svg);
  		background-size:60px 60px;
  		opacity: .9;
+ 		margin: 10px 20px;
  	}
+
+ 	@media( max-width:867px){ 
+ 		text-align: center;
+		p {
+			display: block;
+		}
+
+		.cfm-logo-footer {
+			display: block;
+			margin: auto;
+		}
+
+		.social-navigation {
+			
+			display: block;
+			position: static;
+
+		}
+
+	}
 }
 
 div.section-header{
@@ -458,8 +515,8 @@ div.cfm-project-gallery{
 }
 
 div.social-navigation{
-	display: block;
-	text-align: center;
+	// display: block;
+	// text-align: center;
 
 	ul{
 		display: inline-block;
@@ -506,27 +563,6 @@ div.social-navigation{
 					}
 				}
 			}
-
-			&.pinterest-btn{
-				div.project-inner{
-					a{
-						background-image:url(../img/pinterest_icon.png);
-					}
-				}
-			}
-
-			&.instagram-btn{
-				div.project-inner{
-					a{
-						background-image:url(../img/instagram_icon.png);
-					}
-				}
-			}
-
-			&:first-child{
-				div.project-inner{
-				}
-			}
 		}
 	}
 }
@@ -556,12 +592,14 @@ div.social-navigation{
 		z-index: 5;
 		top:100%;
 		opacity: 0;
+		background: $cfmred;
+		padding-top: 45px;
 
 		@include prefix( "transition", opacity .4s);
 
 		.mobile-menu-inner{
 			height: 100%;
-			background: #FFF;
+			background: $cfmred;
 
 			ul{
 				position: absolute;
@@ -574,19 +612,19 @@ div.social-navigation{
 					display: block;
 
 					a{
-						background:#FFF;
+						background:$cfmred;
 						margin:0; padding:0;
 						display: block;
 
 						h1{
-							color: #222;
-							font-family:"gotham-light";
+							color: #fff;
+							font-family:"gotham-book";
 							margin:0; padding:0;
 							font-size: 20px;
 							line-height: 40px;
 
 							@media(min-height:$tablet-small){
-								font-size: 30px;
+								font-size: 34px;
 								line-height: 70px;
 							}
 						}
@@ -594,7 +632,7 @@ div.social-navigation{
 
 					&:hover{
 						a{
-							background:$cfmred;
+							background:#222;
 							border:none;
 
 							h1{
@@ -619,7 +657,7 @@ div.social-navigation{
 				}
 
 				@media(min-height:$tablet-large){
-					top: 35%;
+					top: 50%;
 				}
 			}
 		}

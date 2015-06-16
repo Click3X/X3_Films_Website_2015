@@ -28,9 +28,9 @@
 				outline:none !important;
 			}
 
-			#click3x-tab, #click3x-tab h1 {
-				color: $cfmred;
-			}
+			// #click3x-tab, #click3x-tab h1 {
+			// 	color: $cfmred;
+			// }
 
 			&:hover, &.active{
 				a{
@@ -38,12 +38,12 @@
 					border-bottom:1px solid #AAA;
 				}
 			}
-			#click3x-tab:hover, &.active {
-				color:#FFF;
-				h1 {
-					color:#FFF;
-				}
-			}
+			// #click3x-tab:hover, &.active {
+			// 	color:#FFF;
+			// 	h1 {
+			// 		color:#FFF;
+			// 	}
+			// }
 
 		}
 	}

@@ -8,6 +8,15 @@ define([
 		id:"about",
 		onready:function(){
 			this.buildprojectgalleries();
+			//initialize swiper when document ready  
+		    var mySwiper = new Swiper ('.swiper-container', {
+		      // Optional parameters
+		      direction: 'horizontal',
+		      loop: true,
+		      // Navigation arrows
+			    nextButton: '.swiper-button-next',
+			    prevButton: '.swiper-button-prev',
+		    })  
 		},
 		onclose:function(){
 		},

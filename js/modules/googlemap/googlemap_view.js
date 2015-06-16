@@ -5,7 +5,8 @@ define([
 		initialize:function(){
 			var mapOptions = {
 	            zoom: 15,
-	            backgroundColor:"#FFF",
+	            backgroundColor:"#b9c6cb",
+	            color: "#b4132d",
 				scrollwheel: false,
 				disableDoubleClickZoom: true,
 	            center: new google.maps.LatLng(40.7413197,-73.9913,18),
@@ -35,11 +36,35 @@ define([
 	            		]
 	            	},
 	            	{
+	            		'featureType': 'road',
+				        'elementType': 'labels.text',
+				        'stylers': [
+				            {color:"#ff3e3a"},
+				        ]
+	            	},
+	            	{
+	            		'featureType': 'administrative.neighborhood',
+				        'elementType': 'labels',
+				        'stylers': [
+				            {visibility:"on"},
+				            
+				        ]
+	            	},
+	            	{
+	            		'featureType': 'administrative.neighborhood',
+				        'elementType': 'labels.text',
+				        'stylers': [
+				            {color:"#676767"},
+				            { "weight": 0.2 },
+      						// { "gamma": 4.25 }
+				        ]
+	            	},
+	            	{
 	            		featureType:"water",
 	            		elementType:"all",
 	            		stylers:[
 	            			{visibility:"on"},
-	            			{color:"#222222"},
+	            			{color:"#b9c6cb"},
 	            			{lightness:0}
 	            		]
 	            	},
@@ -89,24 +114,24 @@ define([
 
 	        var map = new google.maps.Map(mapElement, mapOptions);
 
-	        var image = {
-				url: base_url + 'img/marker.png',
-				size: new google.maps.Size(70, 88),
-				anchor: new google.maps.Point(22, 86),
-				scaledSize: new google.maps.Size(70, 88)
-			};
-			var shape = {
-		    	coords: [1, 1, 1, 60, 44, 60, 44 , 1],
-					type: 'poly'
-			};
-	        var marker = new google.maps.Marker({
-				position: markerLatLng,
-				map: map,
-				animation: google.maps.Animation.DROP,
-				title:"Hello World!",
-				icon:image,
-				shape:shape
-			});
+	  //       var image = {
+			// 	url: base_url + 'img/marker.png',
+			// 	size: new google.maps.Size(70, 88),
+			// 	anchor: new google.maps.Point(22, 86),
+			// 	scaledSize: new google.maps.Size(70, 88)
+			// };
+			// var shape = {
+		 //    	coords: [1, 1, 1, 60, 44, 60, 44 , 1],
+			// 		type: 'poly'
+			// };
+	  //       var marker = new google.maps.Marker({
+			// 	position: markerLatLng,
+			// 	map: map,
+			// 	animation: google.maps.Animation.DROP,
+			// 	title:"Hello World!",
+			// 	icon:image,
+			// 	shape:shape
+			// });
 
 			var getCen = map.getCenter();
 

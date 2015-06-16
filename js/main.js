@@ -9,6 +9,7 @@ require.config({
         backbone:       'js/vendor/backbone.min',
         underscore:     'js/vendor/underscore.min',
         text:           'js/vendor/text.min',
+        googlemaps:     'js/vendor/googlemaps.min',
         router:         'js/router',
         collections:    'js/collections',
         pages:          'js/views/pages',

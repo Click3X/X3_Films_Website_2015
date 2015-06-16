@@ -38,7 +38,7 @@
 			<?php endforeach; ?>
 		</ul>
 	</div>
-	<div id="reel-video" class="section-header">
+<!-- 	<div id="reel-video" class="section-header">
 		<h2>OUR 2015 REEL</h2>
 	</div>
 	<div id="reel-videoplayer" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/CFM_REEL_CS_CFM_2015" data-poster="http://media.click3x.com/images/cfm/modules/banner-video/CFM_Reel.gif">
@@ -60,5 +60,5 @@
 				</ul><div class="cfm-video-progress-container"><a class="cfm-video-seek-bar"></a><input class="cfm-video-seek-bar-input" type="range" value="0"></div>
 			</div>
 	    </div>
-	</div>
+	</div> -->
 </div>
