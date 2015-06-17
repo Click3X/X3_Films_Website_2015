@@ -7,10 +7,11 @@ define([
   'pages/project_view',
   'pages/people_view',
   'pages/contact_view',
+  'pages/directors_view',
   'modules/navigation/views/navigation_view',
   'modules/videoplayer/views/videoplayer_view',
   'modules/hamburger/hamburger_view'
-], function (Backbone, PageCollection, HomeView, ProjectsView, AboutView, ProjectView, PeopleView, ContactView, NavigationView, VideoPlayerView, HamburgerView){
+], function (Backbone, PageCollection, HomeView, ProjectsView, AboutView, ProjectView, PeopleView, ContactView, DirectorsView, NavigationView, VideoPlayerView, HamburgerView){
   var Router   = Backbone.Router.extend({
     initialize:function(){
       var _t = this;
@@ -24,7 +25,8 @@ define([
         new ProjectView({ collection:_t.page_collection, id:"project"}),
         new ProjectView({ collection:_t.page_collection, id:"featured"}),
         new PeopleView({ collection:_t.page_collection}),
-        new ContactView({ collection:_t.page_collection})
+        new ContactView({ collection:_t.page_collection}),
+        new DirectorsView({ collection:_t.page_collection})
       ];
 
       $("#logo a").click(function(event){

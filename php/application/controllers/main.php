@@ -11,6 +11,11 @@ class Main extends CI_Controller {
 			$viewdata["featured_projects"] = $featured_projects["data"];
 		}
 
+		if($_page_id == "directors"){
+			$directors = $this->getpagedata( "projects", "project" );
+			$viewdata["directors"] = $directors["data"];
+		}
+
 		$this->load->view( 'index_view', $viewdata );
 	}
 

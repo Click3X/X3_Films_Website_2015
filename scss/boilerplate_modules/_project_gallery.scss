@@ -23,7 +23,7 @@ div.cfm-project-gallery{
 	 			a{
 	 				cursor: pointer;
 	 				display: block;
-	 				padding-bottom:100%;
+	 				padding-bottom:50%;
 	 				background-color: #EEE;
 	 				background-repeat:no-repeat;
 	 				background-size:cover;
@@ -36,27 +36,27 @@ div.cfm-project-gallery{
 	 					text-decoration: none;
 	 				}
 
-	 				div.project-label{
-	 					position: absolute;
-	 					height: 100%; width: 100%;
-	 					text-align: center;
+	 				// div.project-label{
+	 				// 	position: absolute;
+	 				// 	height: 100%; width: 100%;
+	 				// 	text-align: center;
 
-	 					&:before{
-						 	content: "";
-						 	display: inline-block;
-						 	height: 100%;
-						 	vertical-align: middle;
-						 	margin: 0 0 0 0;
-	 					}
+	 				// 	&:before{
+						//  	content: "";
+						//  	display: inline-block;
+						//  	height: 100%;
+						//  	vertical-align: middle;
+						//  	margin: 0 0 0 0;
+	 				// 	}
 
-	 					div.project-label-inner{
-	 						border-radius: 4px;
-	 						background-color:#FFF;
-	 						padding:20px;
-		 					display: inline-block;
-						  	vertical-align: middle;
-		 				}
-	 				}
+	 				// 	div.project-label-inner{
+	 				// 		border-radius: 4px;
+	 				// 		background-color:#FFF;
+	 				// 		padding:20px;
+		 			// 		display: inline-block;
+						//   	vertical-align: middle;
+		 			// 	}
+	 				// }
 	 			}
  			}
  		}

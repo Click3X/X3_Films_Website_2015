@@ -83,10 +83,10 @@
                         <div class="logo-white"><a href="<?php echo base_url(); ?>"></a></div>
                         <ul>
                             <!-- <li><a data-navigate-to="home" href="<?php echo base_url(); ?>home"><h1>HOME</h1></a></li> -->
-                            <li><a data-navigate-to="projects" href="<?php echo base_url(); ?>directors"><h1>DIRECTORS</h1></a></li>
+                            <li><a data-navigate-to="directors" href="<?php echo base_url(); ?>directors"><h1>DIRECTORS</h1></a></li>
                             <li><a data-navigate-to="projects" href="<?php echo base_url(); ?>projects"><h1>WORK</h1></a></li>
                             <li><a data-navigate-to="about" href="<?php echo base_url(); ?>about"><h1>ABOUT</h1></a></li>
-                            <li><a href="<?php echo base_url(); ?>contact"><h1>CONTACT</h1></a></li>
+                            <li><a data-navigate-to="contact" href="<?php echo base_url(); ?>contact"><h1>CONTACT</h1></a></li>
                             <li><a href="http://www.click3x.com"><h1>CLICK 3X</h1></a></li>
                         </ul>
                     </div>

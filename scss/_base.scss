@@ -384,8 +384,8 @@ div.cfm-project-gallery{
 		margin:0;
 
 		li{
-			@media( min-width:$tablet-small){ width:50%; }
- 			@media( min-width:$tablet-large){ width:33.33334%; }
+			@media( min-width:700px){ width:50%; }
+ 			@media( min-width:$desktop-large){ width:33.33334%; }
 
 			div.project-inner{
 				padding:0;
@@ -394,52 +394,52 @@ div.cfm-project-gallery{
  					background-size:100.5%;
  					background-color: #FFF;
 
- 					div.project-label{
- 						background-color:rgba(255,255,255,.95);
- 						opacity: 0;
+ 				// 	div.project-label{
+ 				// 		background-color:rgba(255,255,255,.95);
+ 				// 		opacity: 0;
 
- 						@include prefix( "transform", scale(.9) );
- 						@include prefix( "transition", .25s ease-in-out );
+ 				// 		@include prefix( "transform", scale(.9) );
+ 				// 		@include prefix( "transition", .25s ease-in-out );
 
- 						div.project-label-inner{
- 							background-color: transparent;
- 							border-radius: 0;
- 							border-left:none;
-	 						border-right:none;
-	 						padding:40px;
+ 				// 		div.project-label-inner{
+ 				// 			background-color: transparent;
+ 				// 			border-radius: 0;
+ 				// 			border-left:none;
+	 			// 			border-right:none;
+	 			// 			padding:40px;
 
-							@media( min-width:$tablet-small){ padding:5px; }
+					// 		@media( min-width:$tablet-small){ padding:5px; }
 
- 							@include prefix( "transform", scale(1.2) );
- 							@include prefix( "transition", transform .25s ease-in-out );
+ 				// 			@include prefix( "transform", scale(1.2) );
+ 				// 			@include prefix( "transition", transform .25s ease-in-out );
 
- 							h2{
- 								opacity: .96;
- 								font-family: "gotham-bold";
- 								line-height: 26px;
- 								text-transform: uppercase;
- 								color: $cfmred;
+ 				// 			h2{
+ 				// 				opacity: .96;
+ 				// 				font-family: "gotham-bold";
+ 				// 				line-height: 26px;
+ 				// 				text-transform: uppercase;
+ 				// 				color: $cfmred;
 
- 								font-size: 26px;
+ 				// 				font-size: 26px;
 
- 								* {
- 									color: #FFF !important;
- 								}
- 							}
- 						}
-					}
+ 				// 				* {
+ 				// 					color: #FFF !important;
+ 				// 				}
+ 				// 			}
+ 				// 		}
+					// }
 
-					&:hover{
-						div.project-label{
-							opacity: 1;
+					// &:hover{
+					// 	div.project-label{
+					// 		opacity: 1;
 
-	 						@include prefix( "transform", scale(1) );
+	 			// 			@include prefix( "transform", scale(1) );
 
-	 						div.project-label-inner{
-	 							@include prefix( "transform", scale(1) );
-	 						}
-						}
-					}
+	 			// 			div.project-label-inner{
+	 			// 				@include prefix( "transform", scale(1) );
+	 			// 			}
+					// 	}
+					// }
 				}
 			}
 		}
