@@ -29,7 +29,7 @@ class Projects_Model extends C3X_Model
     }
 
     function getmodules($pid){
-        $query = $this->db->query("SELECT module_id,title,heading,subhead,blurb,description,module_type_name FROM project_module_lu LEFT JOIN modules ON project_module_lu.module_id=modules.id LEFT JOIN module_types ON modules.module_type_id=module_types.id WHERE project_id='".$pid."' ORDER BY module_id");
+        $query = $this->db->query("SELECT module_id,title,heading,subhead,blurb,description,module_type_name, gif_thumb, poster, video_filename FROM project_module_lu LEFT JOIN modules ON project_module_lu.module_id=modules.id LEFT JOIN module_types ON modules.module_type_id=module_types.id WHERE project_id='".$pid."' ORDER BY module_id");
         $modules = $query->result();
 
         //get media

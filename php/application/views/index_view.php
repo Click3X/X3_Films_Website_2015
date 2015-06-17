@@ -60,6 +60,7 @@
 
             <div id="page-container">
                 <div id="page-content">
+                    <?php //echo $page_id ; ?>
                     <?php $this->load->view( "pages/".$page_id."_view" ); ?>
                 </div>
             </div>

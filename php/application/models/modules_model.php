@@ -14,7 +14,11 @@ class Modules_Model extends C3X_Model
             'blurb'                     => array("shown"=>true,     "label"=>"blurb"),
             'filename'           		=> array("shown"=>true,     "label"=>"File Name"),
             'description'           	=> array("shown"=>true,     "label"=>"Description"),
-            'module_type_id'           	=> array("shown"=>true,     "label"=>"Module Type ID")
+            'module_type_id'           	=> array("shown"=>true,     "label"=>"Module Type ID"),
+            'gif_thumb'                 => array("shown"=>true,     "label"=>"Gif Thumb"),
+            'poster'                    => array("shown"=>true,     "label"=>"Poster"),
+            'video_filename'            => array("shown"=>true,     "label"=>"Video Filename")
+            
 		);
 	}
 }

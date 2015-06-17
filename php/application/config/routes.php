@@ -42,8 +42,11 @@ $route['default_controller'] 			= "main";
 $route['404_override'] 					= '';
 
 /* js detail template routes */	
-$route['template/project/(:any)'] 		= 'main/projectdetailtemplate/$1/project/projects';
-$route['template/featured/(:any)'] 		= 'main/projectdetailtemplate/$1/featured/home';
+// $route['template/project/(:any)'] 		= 'main/projectdetailtemplate/$1/project/projects';
+// $route['template/featured/(:any)'] 		= 'main/projectdetailtemplate/$1/featured/home';
+// directors
+$route['template/director/(:any)'] 		= 'main/directordetailtemplate/$1/director/directors';
+// $route['template/featured/(:any)'] 		= 'main/projectdetailtemplate/$1/featured/home';
 
 /* js page template routes */	
 $route['template/projects.php'] 		= 'main/pagetemplate/projects/project';
@@ -52,6 +55,9 @@ $route['template/(:any).php'] 			= 'main/pagetemplate/$1';
 /* page routes */
 $route['project/(:any)/(:any)'] 		= 'main/projectdetail/$1/project/projects/$2';
 $route['project/(:any)'] 				= 'main/projectdetail/$1/project/projects';
+
+// $route['director/(:any)/(:any)'] 		= 'main/directordetail/$1/project/directors/$2';
+$route['director/(:any)'] 				= 'main/directordetail/$1/project/directors';
 
 $route['featured/(:any)'] 				= 'main/projectdetail/$1/featured/home';
 $route['projects'] 						= 'main/index/projects/project';

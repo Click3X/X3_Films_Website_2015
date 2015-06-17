@@ -30,6 +30,16 @@ class Main extends CI_Controller {
 		$this->load->view("index_view", $viewdata );
 	}
 
+	public function directordetail( $_detail_slug, $category_slug = "project", $parent_slug = "directors" ){
+		$viewdata = $this->getprojectdetaildata( $_detail_slug, $category_slug );
+		$viewdata["page_id"] = "director";
+		$viewdata["category_slug"] = $category_slug; 
+		$viewdata["parent_slug"] = $parent_slug;
+		// $viewdata["module_id"] = $module_id;
+
+		$this->load->view("index_view", $viewdata );
+	}
+
 	/*==== JS PAGE TEMPLATES =====*/
 	//page js template
 	public function pagetemplate( $_page_id = "home", $category_slug = "" ){
@@ -41,11 +51,16 @@ class Main extends CI_Controller {
 			$viewdata["featured_projects"] = $featured_projects["data"];
 		}
 
+		if($_page_id == "directors"){
+			$directors = $this->getpagedata( "projects", "project" );
+			$viewdata["directors"] = $directors["data"];
+		}
+
 		$this->load->view( 'pages/' . $_page_id . "_view", $viewdata );
 	}
 
 	//page detail js template called with ajax from project.js view
-	public function projectdetailtemplate( $_detailslug, $category_slug = "project", $parent_slug = "projects" ){
+	public function projectdetailtemplate( $_detailslug, $category_slug = "director", $parent_slug = "projects" ){
 		$viewdata = $this->getprojectdetaildata( $_detailslug, $category_slug );
 		$viewdata["page_id"] = "project"; 
 		$viewdata["category_slug"] = $category_slug; 
@@ -53,6 +68,17 @@ class Main extends CI_Controller {
 		$viewdata["template"] = true;
 
 		$detail = $this->load->view( "project_detail_view", $viewdata, true);
+		echo $detail;
+	}
+
+	public function directordetailtemplate( $_detailslug, $category_slug = "director", $parent_slug = "directors" ){
+		$viewdata = $this->getprojectdetaildata( $_detailslug, $category_slug );
+		$viewdata["page_id"] = "director"; 
+		$viewdata["category_slug"] = $category_slug; 
+		$viewdata["parent_slug"] = $parent_slug;
+		$viewdata["template"] = true;
+
+		$detail = $this->load->view( "director_view", $viewdata, true);
 		echo $detail;
 	}
 
