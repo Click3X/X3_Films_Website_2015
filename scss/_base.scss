@@ -198,6 +198,12 @@ div.title-label {
 	height: 10px;
 }
 
+.red-gradient {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
 .line-arrow{
 	display:inline-block;
 	width:6px; height:14px;
@@ -393,53 +399,6 @@ div.cfm-project-gallery{
  				a{
  					background-size:100.5%;
  					background-color: #FFF;
-
- 				// 	div.project-label{
- 				// 		background-color:rgba(255,255,255,.95);
- 				// 		opacity: 0;
-
- 				// 		@include prefix( "transform", scale(.9) );
- 				// 		@include prefix( "transition", .25s ease-in-out );
-
- 				// 		div.project-label-inner{
- 				// 			background-color: transparent;
- 				// 			border-radius: 0;
- 				// 			border-left:none;
-	 			// 			border-right:none;
-	 			// 			padding:40px;
-
-					// 		@media( min-width:$tablet-small){ padding:5px; }
-
- 				// 			@include prefix( "transform", scale(1.2) );
- 				// 			@include prefix( "transition", transform .25s ease-in-out );
-
- 				// 			h2{
- 				// 				opacity: .96;
- 				// 				font-family: "gotham-bold";
- 				// 				line-height: 26px;
- 				// 				text-transform: uppercase;
- 				// 				color: $cfmred;
-
- 				// 				font-size: 26px;
-
- 				// 				* {
- 				// 					color: #FFF !important;
- 				// 				}
- 				// 			}
- 				// 		}
-					// }
-
-					// &:hover{
-					// 	div.project-label{
-					// 		opacity: 1;
-
-	 			// 			@include prefix( "transform", scale(1) );
-
-	 			// 			div.project-label-inner{
-	 			// 				@include prefix( "transform", scale(1) );
-	 			// 			}
-					// 	}
-					// }
 				}
 			}
 		}
@@ -515,8 +474,6 @@ div.cfm-project-gallery{
 }
 
 div.social-navigation{
-	// display: block;
-	// text-align: center;
 
 	ul{
 		display: inline-block;

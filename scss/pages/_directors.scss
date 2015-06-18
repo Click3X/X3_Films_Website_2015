@@ -1,5 +1,8 @@
-div#directors-page{
+/**
+ * Directors Page Styles
+ */
 
+div#directors-page{
 
 	h1 {
 		color: $cfmred;
@@ -16,13 +19,6 @@ div#directors-page{
 			filter: gray saturate(0%) brightness(70%) contrast(100%);; filter: grayscale(100%) saturate(0%) brightness(70%) contrast(100%);;
 			filter: url(desaturate.svg#greyscale);
 			@include prefix( "transition", all .3s ease);
-		}
-
-		.red-gradient {
-	 		position: absolute;
-			width: 100%;
-			height: 100%;
-			// @include prefix( "transition", background .4s ease);			
 		}
 
 		&:hover {

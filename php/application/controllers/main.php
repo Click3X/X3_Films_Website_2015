@@ -60,7 +60,7 @@ class Main extends CI_Controller {
 	}
 
 	//page detail js template called with ajax from project.js view
-	public function projectdetailtemplate( $_detailslug, $category_slug = "director", $parent_slug = "projects" ){
+	public function projectdetailtemplate( $_detailslug, $category_slug = "project", $parent_slug = "projects" ){
 		$viewdata = $this->getprojectdetaildata( $_detailslug, $category_slug );
 		$viewdata["page_id"] = "project"; 
 		$viewdata["category_slug"] = $category_slug; 
@@ -71,14 +71,14 @@ class Main extends CI_Controller {
 		echo $detail;
 	}
 
-	public function directordetailtemplate( $_detailslug, $category_slug = "director", $parent_slug = "directors" ){
+	public function directordetailtemplate( $_detailslug, $category_slug = "project", $parent_slug = "directors" ){
 		$viewdata = $this->getprojectdetaildata( $_detailslug, $category_slug );
 		$viewdata["page_id"] = "director"; 
 		$viewdata["category_slug"] = $category_slug; 
 		$viewdata["parent_slug"] = $parent_slug;
 		$viewdata["template"] = true;
 
-		$detail = $this->load->view( "director_view", $viewdata, true);
+		$detail = $this->load->view( "director_detail_view", $viewdata, true);
 		echo $detail;
 	}
 
