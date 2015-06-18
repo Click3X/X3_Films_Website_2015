@@ -84,6 +84,8 @@ define([
 	  //       });
 
 	        this.buildprojectgalleries();
+	        _t.$el.find('.director-item').click(_t.openOverlay);
+			_t.$el.find('.overlay-close').click(_t.closeOverlay);
 	        _t.viewMore();
 
 	  //       (function($) {
@@ -108,6 +110,17 @@ define([
           		return text === "MORE" ? "LESS" : "MORE";
       			});
 			});
+		},
+
+		openOverlay:function() {
+			var director_id = $(this).data('id');
+			$('#director-overlay-' + director_id).addClass('open');
+			$('html').addClass('noScroll');
+		},
+
+		closeOverlay:function() {			
+			$('.video-overlay').removeClass('open');
+			$('html').removeClass('noScroll');
 		},
 
 		onclose:function(){

@@ -13,6 +13,8 @@ define([
 		      // Optional parameters
 		      direction: 'horizontal',
 		      loop: true,
+		      slidesPerView: 1,
+		      autoplay: 8000,
 		      // Navigation arrows
 			    nextButton: '.swiper-button-next',
 			    prevButton: '.swiper-button-prev',

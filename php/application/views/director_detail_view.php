@@ -17,7 +17,7 @@
 	<?php //var_dump($modules);?>
 	<ul>
 		<?php foreach ( $modules as $module ): ?>
-		<li>
+		<li data-id="<?php echo $module->module_id; ?>" class="director-item">
 			<a style="background-image: url(<?php echo base_url();?>img/modules/gif_thumb/<?php echo $module->gif_thumb; ?>.jpg);"><div class="red-gradient"></div></a>
 			
 			<div class="video-label">
@@ -45,7 +45,7 @@
 <!-- 				<?php if( !empty($previous) ) : ?>
 				<li class="previous-button"><a href="<?php echo base_url(). $category_slug. '/' . $previous; ?>" data-navigate-to="<?php echo $category_slug. '/' . $previous; ?>" ><span id="arrow-left"></span><span class="director-name"><?php echo $previous_director; ?></span></a></li>
 				<?php endif; ?> -->
-				<div class="previous-button"><a href=""><span id="arrow-left"></span><span class="director-name">WEN ZHANG</span></a></div>
+				<!-- <div class="previous-button"><a href=""><span id="arrow-left"></span><span class="director-name">WEN ZHANG</span></a></div> -->
 
 				<?php if( !empty($next) ) : ?>
 				<div class="next-button"><a href="<?php echo base_url(). $category_slug. '/' . $next; ?>" data-navigate-to="<?php echo $category_slug. '/' . $next; ?>" ><span class="director-name"><?php echo $next_director; ?></span><span id="arrow-right"></span></a></div>
@@ -56,3 +56,13 @@
 		</div>
 	</div>
 </div>
+
+
+<?php foreach ($modules as $module): ?>
+	<div class="video-overlay overlay-scale" id="director-overlay-<?php echo $module->module_id; ?>">
+		<div class="video-overlay-inner">
+			<div class="overlay-close"></div>
+				<?php echo $module->title; ?>
+		</div>
+	</div>
+<?php endforeach; ?>
