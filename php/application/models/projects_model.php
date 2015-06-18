@@ -47,7 +47,7 @@ class Projects_Model extends C3X_Model
     }
 
     function nextproject($pid, $category_slug, $pdate){
-        $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' AND date_created < '".$pdate."' AND published='on' ORDER BY date_created DESC,`order` ASC LIMIT 1 ");
+        $query = $this->db->query("SELECT slug,project_id,title FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' AND date_created < '".$pdate."' AND published='on' ORDER BY date_created DESC,`order` ASC LIMIT 1 ");
         $result = $query->result();
         // echo 'NEXT: ';
         // echo '<pre>';
@@ -57,7 +57,7 @@ class Projects_Model extends C3X_Model
     }
 
     function previousproject($pid, $category_slug, $pdate){
-        $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' AND date_created > '".$pdate."' AND published='on' ORDER BY date_created ASC,`order` DESC LIMIT 1");
+        $query = $this->db->query("SELECT slug,project_id,title FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' AND date_created > '".$pdate."' AND published='on' ORDER BY date_created ASC,`order` DESC LIMIT 1");
         $result = $query->result();
         // echo 'PREV: ';
         // echo '<pre>';

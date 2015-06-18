@@ -231,39 +231,26 @@ div.title-label {
 	background-color:#FFF;
 
 	.page-header-navigation, .page-footer-navigation{
-		background-color: rgba(240,240,240,1);
+		background-color: $cfmred;
+		border-bottom: 1px solid #fff;
 
 		.page-header-inner, .page-footer-inner{
-			padding:12px 20px 6px 20px;
+			padding: 0;
+
+			@media( min-width:601px){
+				padding:0 20px;
+			}
 			
-			@media( min-width:$tablet-small){
-				padding:14px 40px 10px 40px;
+			@media( min-width:$tablet-large){
+				padding:0 40px 0 40px;
 			}
 
 			.cfm-project-naviation{
-				ul{
-					display: block;
-					
-					li{
-						float: left;
-						padding:0;
-
-						a{
-							font-size: 15px;
-							font-family: "gotham-light";
-							text-decoration:none;
-							color:#AAA;
-							border:none !important;
-
-							&:hover{
-								color: #000;
-							}
-						}
-
-						&.next-button, &.previous-button{
-							float: right;
-						}
-					}
+				a{
+					font-size: 15px;
+					font-family: "gotham-light";
+					text-decoration:none;
+					color:#AAA;
 				}
 			}
 		}

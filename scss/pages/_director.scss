@@ -19,10 +19,18 @@ div#director-page{
 				display: inline-block;
 				border-bottom: 2px solid #111;
 				text-decoration: none;
+				cursor: pointer;
 			}
 
 			p {
 				margin: 4px 0 10px 0;
+			}
+
+			.hidden-bio {
+				display: none;
+				// height: 0;
+				// opacity: 0;
+				// @include prefix( "transition", height .2s linear);
 			}
 
 		}
@@ -177,6 +185,102 @@ div#director-page{
 				}
 			}
 		}
+
+		.page-footer-navigation {
+
+			.navigation-inner {
+				line-height: 13px;
+				position: relative;
+				height: 90px;
+
+				.previous-button {
+					float: left;
+				}
+
+				.next-button {
+					float: right;
+				}
+
+				.back-grid {
+					margin: auto;
+					display: inline-block;
+					border-left: 1px solid #fff;
+					border-right: 1px solid #fff;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					width: 90px;
+
+					a {
+						background-position:center center;
+						background-repeat: no-repeat;
+						background-size: 40px 40px;
+						width: 40px;
+						height: 40px;
+						padding: 25px;
+						display: block;
+
+					}
+				}
+
+				a {
+					display: inline-block;
+					color: #fff;
+					text-transform: uppercase;
+					padding: 35px 0;
+
+					#arrow-right {
+						width: 0; 
+						height: 0; 
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent;
+						
+						border-left: 10px solid #fff;
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					#arrow-left {
+						width: 0; 
+						height: 0; 
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent; 
+						
+						border-right:10px solid #fff; 
+						display: inline-block;
+						vertical-align: middle;
+					}		
+
+					.director-name {
+						display: inline-block;
+						padding: 0 20px;
+						vertical-align: middle;
+
+					}	
+				}
+
+				@media (max-width: 600px) {
+					height: auto;
+					.previous-button, .next-button, .back-grid {
+						float: none;
+						display: block;
+						position: static;
+						margin: auto;
+					}
+
+					.previous-button, .next-button {
+						border-top: 1px solid #fff;
+					}
+
+				}
+
+			}
+
+		}
+
+
 
 	}
 

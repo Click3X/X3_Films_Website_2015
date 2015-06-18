@@ -12,9 +12,12 @@ define([
 
 			if(firstpage){
 				this.initdetails();
+				// console.log('first page');
 			} else {
 				this.loaddirectordetails();
+				// console.log('not first page');
 			}
+
 		},
 		loaddirectordetails:function(){
 			var _t = this;
@@ -81,6 +84,7 @@ define([
 	  //       });
 
 	        this.buildprojectgalleries();
+	        _t.viewMore();
 
 	  //       (function($) {
 			//     $.fn.goTo = function() {
@@ -91,8 +95,19 @@ define([
 			//     }
 			// })(jQuery);
 
-			if( _t.model.get("moduleslug") )
-	        	$("#"+_t.model.get("moduleslug")).goTo();
+			// if( _t.model.get("moduleslug") )
+	  //       	$("#"+_t.model.get("moduleslug")).goTo();
+		},
+
+		// VIEW MORE BIO
+		viewMore:function() {
+			var _t = this;
+			_t.details_container_el.find('.view-more').click(function(){
+				$('.hidden-bio').slideToggle();
+				$(this).text(function(i, text){
+          		return text === "MORE" ? "LESS" : "MORE";
+      			});
+			});
 		},
 
 		onclose:function(){
