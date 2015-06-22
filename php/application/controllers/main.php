@@ -137,7 +137,16 @@ class Main extends CI_Controller {
 	 		if( empty($_category_slug) ){
 	 			$data = $this->model->get();
 	 		} else {
-	 			$data = $this->model->getbycategory( $_category_slug );
+	 			if ($_category_slug == 'featured') {
+	 				$data = $this->model->getmodulesbycategory( $_category_slug );
+	 			} else {
+	 				$data = $this->model->getbycategory( $_category_slug );
+	 			}
+	 			// $data = $this->model->getbycategory( $_category_slug );
+	 			
+	 			// echo '<pre>';
+	 			// var_dump($data);
+	 			// echo '</pre>';
 	 		}
 	 	}
 

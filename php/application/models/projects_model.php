@@ -28,6 +28,11 @@ class Projects_Model extends C3X_Model
         return $query->result();
     }
 
+    function getmodulesbycategory ( $category = "casestudy" ) {
+        $query = $this->db->query("SELECT modules.id AS module_id, projects.id AS project_id, modules.title AS module_title, modules.heading AS module_heading, modules.subhead AS module_subhead, gif_thumb, video_filename, projects.title AS project_title, projects.slug AS project_slug, published FROM ( SELECT category_name,category_id,module_id FROM module_category_lu CROSS JOIN categories ON categories.id = module_category_lu.category_id AND category_name = '".$category."' ) AS filtered_lu LEFT JOIN modules ON modules.id = module_id LEFT JOIN project_module_lu ON modules.id = project_module_lu.module_id LEFT JOIN projects on project_module_lu.project_id = projects.id ");
+        return $query->result();   
+    }
+
     function getmodules($pid){
         $query = $this->db->query("SELECT module_id,title,heading,subhead,blurb,description,module_type_name, gif_thumb, poster, video_filename FROM project_module_lu LEFT JOIN modules ON project_module_lu.module_id=modules.id LEFT JOIN module_types ON modules.module_type_id=module_types.id WHERE project_id='".$pid."' ORDER BY module_id");
         $modules = $query->result();

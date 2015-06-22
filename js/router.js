@@ -48,7 +48,9 @@ define([
         _t.navigations.push(navigation);
       });
 
-      _t.hamburger = new HamburgerView({el:document.getElementById("hamburger")});
+      // _t.hamburger = new HamburgerView({el:document.getElementById("hamburger")});
+      _t.hamburger = new HamburgerView({el:document.getElementsByClassName("hamburger")});
+      
 
       this.start();
     },

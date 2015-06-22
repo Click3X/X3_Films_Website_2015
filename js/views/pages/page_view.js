@@ -20,6 +20,7 @@ define([
 				else
 					_t.close();
 			});
+
 		},
 		oninit:function(){
 
@@ -34,6 +35,7 @@ define([
 			} else {
 				console.log("first page: not rendering html");
 			}
+
 
 			this.ready();
 		},
@@ -66,6 +68,7 @@ define([
 			        return this; // for chaining...
 			    }
 			})(jQuery);
+
 		},
 		buildprojectgalleries:function(){
 			console.log("build project galleries");

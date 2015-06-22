@@ -19,6 +19,10 @@ body{
 	overflow:hidden;
 }
 
+#site-wrapper {
+	border-top: 25px solid $cfmred;
+}
+
 h1,h2,h3,h4,h5,h6,strong,b{
 	margin:0;
 	font-weight: normal;
@@ -87,13 +91,10 @@ a:hover{
 }
 
 #header-container{
-	// position:fixed;
 	width:100%;
 	top:0;
-	// background:$cfmred;
 	background: transparent;
 	z-index:6;
-	border-top: 25px solid $cfmred;
 
 	@include clearfix();
 
@@ -147,7 +148,7 @@ a:hover{
 	}
 }
 
-div.logo-white, div.logo-black{
+div.logo-white, div.logo-black, div.logo-home{
 	position: relative;
 	// margin: 13px 12px 14px 0;
 	// float: left;
@@ -179,6 +180,14 @@ div.logo-white {
 div.logo-black {
 	a {
 		background-image: url( ../img/x3_logo_black.png );
+	}
+
+	margin-top: 20px;
+}
+
+div.logo-home {
+	a {
+		background-image: url( ../img/x3_logo_home.png );
 	}
 
 	margin-top: 20px;
@@ -299,7 +308,7 @@ div.title-label {
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: rgba(102,102,102,0.9);
+		background: #fff;
 		z-index: 99;
 		overflow-y: scroll;
 
@@ -323,12 +332,12 @@ div.title-label {
 	.video-overlay-inner {
 		// overflow-y: scroll;
 		position:relative;
-		padding: 100px 20%;
+		padding: 50px 0 0 0;
 		color: #fff;
 
-		@media(max-width: $tablet-large) {
-			padding: 60px 10%;
-		}
+		// @media(max-width: $tablet-large) {
+		// 	padding: 60px 10%;
+		// }
 
 		// .people-name, .people-title {
 		// 	opacity: .96;
@@ -351,23 +360,23 @@ div.title-label {
 
 		.overlay-close {
 			cursor: pointer;
-			width: 40px;
-			height: 40px;
+			width: 24px;
+			height: 24px;
 			position: absolute;
 			right: 1%;
-			top: 100px;
+			top: 50px;
 			overflow: hidden;
 			border: none;
 			background: url(../img/cross.png) no-repeat center center;
-			background-size: 40px 40px;
-			// text-indent: 200%;
+			background-size: 24px 24px;
+			text-indent: 200%;
 			color: black;
 			outline: none;
 			z-index: 100;
 
-			@media(max-width: $tablet-large) {
-				top: 10px;
-			}
+			// @media(max-width: $tablet-large) {
+			// 	top: 10px;
+			// }
 		}
 	}
 }
@@ -613,7 +622,7 @@ div.social-navigation{
 		position: fixed;
 		top: 0; left: 0;
 		width: 100%; height: 100%;
-		z-index: 5;
+		z-index: 100;
 		top:100%;
 		opacity: 0;
 		background: $cfmred;

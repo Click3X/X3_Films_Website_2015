@@ -42,9 +42,9 @@
 			<div class="navigation-inner">
 												<!-- BACK TO DIRECTORS LIST BTN -->
 					<div class="back-grid"><a href="<?php echo base_url().$parent_slug; ?>" data-navigate-to="<?php echo $parent_slug; ?>" style="background-image: url(<?php echo base_url();?>img/grid_btn.png);"></a></div>	
-<!-- 				<?php if( !empty($previous) ) : ?>
+				<?php if( !empty($previous) ) : ?>
 				<li class="previous-button"><a href="<?php echo base_url(). $category_slug. '/' . $previous; ?>" data-navigate-to="<?php echo $category_slug. '/' . $previous; ?>" ><span id="arrow-left"></span><span class="director-name"><?php echo $previous_director; ?></span></a></li>
-				<?php endif; ?> -->
+				<?php endif; ?> 
 				<!-- <div class="previous-button"><a href=""><span id="arrow-left"></span><span class="director-name">WEN ZHANG</span></a></div> -->
 
 				<?php if( !empty($next) ) : ?>
@@ -57,7 +57,7 @@
 	</div>
 </div>
 
-
+<!-- OVERLAY -->
 <?php foreach ($modules as $module): ?>
 	<div class="video-overlay overlay-scale" id="director-overlay-<?php echo $module->module_id; ?>">
 		<div class="video-overlay-inner">

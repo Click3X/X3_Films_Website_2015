@@ -2,7 +2,155 @@
  * Home Page Styles
  */
 
-  div#home-page{
+div#home-page{
+  	position: relative;
+
+  	// .home-header-container {
+  	// 	position: fixed;
+  	// }
+
+  	.swiper-pagination-bullet {
+  		background: transparent;
+  		border: 1px solid #fff;
+  	}
+
+  	.swiper-pagination-bullet-active {
+  		background: $cfmred;
+  		border: 1px solid transparent;
+  	}
+
+  	#home-header {
+  		position: absolute;
+  		width:100%;
+		top:0;
+		background: transparent;
+		z-index:6;
+		@include clearfix();
+  	}
+
+  	#header-container {
+  		border-top: 25px solid $cfmred;
+  	}
+
+  	.featured-carousel-container {
+  		.swiper-slide {
+  			position: relative;
+
+  			.video-credits {
+  				position: absolute;
+  				top: 0;
+  				bottom: 0;
+  				left: 0;
+  				right: 0;
+  				margin: auto;
+  				height: 150px;  				
+  				text-align: center;
+  				text-transform: uppercase;
+
+  				h1,h2,h3 {
+  					color: #fff;
+  				}
+
+  				.label-line {
+  					border-top: 2px solid #fff;
+  					width: 60px;
+  				}
+
+  				h1 {
+  					font-family: 'gotham-book';
+  				}
+
+  				h3 {
+  					color: $cfmred;
+  					font-family: 'gotham-bold';
+  					font-size: 1em;
+  				}
+
+  				a {
+  					text-decoration: none;
+  					cursor: pointer;
+  				}
+  			}
+
+			.featured-poster {
+	  			background-size: cover;
+	  			background-position: center center;
+	  			background-repeat: no-repeat;
+	  			height: 95vh;
+	  			width: 100%;
+	  			position: relative;
+
+	  			-webkit-filter: grayscale(100%) saturate(0%) brightness(70%) contrast(100%);;
+				filter: gray saturate(0%) brightness(70%) contrast(100%);; filter: grayscale(100%) saturate(0%) brightness(70%) contrast(100%);;
+				filter: url(desaturate.svg#greyscale);  
+  			}
+  		} 		
+  	}
+
+  	div.video-overlay {
+  		div#featured-overlay-slider {
+
+  			div.swiper-slide {
+
+  				div.overlay-credits {
+  					text-align: center;
+  					margin-bottom: 40px;
+  					h1,h2,h3 {
+  						font-family: 'gotham-book';
+  						text-transform: uppercase;
+  					}
+  					h1 {
+  						color: $cfmred;
+  					}
+  				}
+  			}
+
+  			#arrow-left, #arrow-right {
+  				width: 32px;
+				height: 26px;
+				padding: 5px 6px;
+				border: 2px solid #111;
+				background-image: none;
+				top: 130px;
+  			}
+
+			#arrow-left {
+				span {
+					width: 0; 
+					height: 0; 
+					border-top: 10px solid transparent;
+					border-bottom: 10px solid transparent; 
+					border-right:10px solid #111; 
+					display: inline-block;	
+					margin-left: 12px;			
+				}
+
+				
+				@media (min-width: 900px) {
+					left: 20%;
+				}
+			}
+
+			#arrow-right {
+				span {
+					width: 0; 
+					height: 0; 
+					border-top: 10px solid transparent;
+					border-bottom: 10px solid transparent; 
+					border-left:10px solid #111; 
+					display: inline-block;	
+					margin-left: 8px;			
+				}
+
+				@media (min-width: 900px) {
+					right: 20%;
+				}
+			}
+
+
+  		}
+  	}
+
  	div.cfm-project-gallery{
 		ul{
 	 		li{

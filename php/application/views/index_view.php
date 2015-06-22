@@ -40,6 +40,23 @@
         <!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
 
         <div id="site-wrapper" class="site-wrapper">
+            <?php if ($page_id == 'home') { ?>
+<!--             <div id="header-container" style="display: none">
+                <div class="header-inner">
+                    <div id="hamburger" class="hamburger">
+                        <div class="hamburger-inner">
+                            <a>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>                      
+                    </div>
+                    <div class="logo-black"><a href="<?php echo base_url(); ?>"></a></div>
+                </div>
+            </div> -->
+            <?php } else { ?>
             <div id="header-container">
                 <div class="header-inner">
                     <!-- <div id="logo" class="logo"><a href="<?php echo base_url(); ?>"></a></div> -->
@@ -57,6 +74,7 @@
 <!--                     <div id="page-labels"><ul><li data-page-id="projects"><a href="<?php echo base_url(); ?>projects">OUR WORK</a></li><li data-page-id="project"><a href="<?php echo base_url(); ?>projects">OUR WORK</a></li><li data-page-id="about"><a href="<?php echo base_url(); ?>about">ABOUT</a></li></ul></div> -->
                 </div>
             </div>
+            <? } ?>
 
             <div id="page-container">
                 <div id="page-content">
