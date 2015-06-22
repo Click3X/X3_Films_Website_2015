@@ -32,6 +32,7 @@ define([
 				this.$el.html( this.template() );
 				
 				// ga('send', 'pageview', "/" + this.id);
+				
 			} else {
 				console.log("first page: not rendering html");
 			}

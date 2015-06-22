@@ -103,7 +103,7 @@
                         <ul>
                             <!-- <li><a data-navigate-to="home" href="<?php echo base_url(); ?>home"><h1>HOME</h1></a></li> -->
                             <li><a data-navigate-to="directors" href="<?php echo base_url(); ?>directors"><h1>DIRECTORS</h1></a></li>
-                            <li><a data-navigate-to="projects" href="<?php echo base_url(); ?>projects"><h1>WORK</h1></a></li>
+                            <!-- <li><a data-navigate-to="projects" href="<?php echo base_url(); ?>projects"><h1>WORK</h1></a></li> -->
                             <li><a data-navigate-to="about" href="<?php echo base_url(); ?>about"><h1>ABOUT</h1></a></li>
                             <li><a data-navigate-to="contact" href="<?php echo base_url(); ?>contact"><h1>CONTACT</h1></a></li>
                             <li><a href="http://www.click3x.com"><h1>CLICK 3X</h1></a></li>
@@ -135,12 +135,12 @@
 
         <script data-main="<?php echo base_url();?>js/main" src="<?php echo base_url();?>js/vendor/require.min.js"></script>
         <script>
-            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            // e.src='//www.google-analytics.com/analytics.js';
-            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            // ga('create',"<?php echo $this->config->item('ga_account');?>");ga('send','pageview');
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create',"<?php echo $this->config->item('ga_account');?>");ga('send','pageview');
         </script>
     </body>
 </html>
