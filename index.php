@@ -22,12 +22,10 @@
  */
 
 	switch ($host) {
-		case 'cfm.dev':
-		case '10.0.1.44':
-		case '192.168.1.5':
+		case 'x3.dev':
 			define('ENVIRONMENT', 'local');
 			break;
-		case 'staging.clickfiremedia.com':
+		case 'staging.xthreefilms.com':
 			define('ENVIRONMENT', 'staging');
 			break;
 		default:

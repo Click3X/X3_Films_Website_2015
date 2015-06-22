@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'x32015';
-$db['default']['password'] = 'x32015';
-$db['default']['database'] = 'x3';
+$db['default']['username'] = 'xthreefilms';
+$db['default']['password'] = 'xthreefilms';
+$db['default']['database'] = 'xthreefilms';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

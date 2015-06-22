@@ -47,10 +47,11 @@
 
 $active_group = 'default';
 $active_record = TRUE;
+
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'sitesadmin';
-$db['default']['password'] = 'Click3x22!';
-$db['default']['database'] = 'cfm_staging';
+$db['default']['username'] = 'xthreefilms';
+$db['default']['password'] = 'xthreefilms';
+$db['default']['database'] = 'xthreefilms_staging';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
