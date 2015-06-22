@@ -33,15 +33,15 @@
         <!--[if (lt IE 9)]><!--><script src="<?php echo base_url(); ?>js/vendor/respond.min.js"></script><!--<![endif]-->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaTC6YnzPequMZihfh2Cbdr6CjcrhvE_k"></script>
         <script src="<?php echo base_url(); ?>js/vendor/swiper/swiper.min.js"></script>
-        <script src="//use.typekit.net/hqh3atb.js"></script>
-        <script>try{Typekit.load();}catch(e){}</script>
+        <!--<script src="//use.typekit.net/hqh3atb.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>-->
     </head>
         <!--[if IE 8 ]><body class="ie8"><![endif]-->
         <!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
 
         <div id="site-wrapper" class="site-wrapper">
             <?php if ($page_id == 'home') { ?>
-<!--             <div id="header-container" style="display: none">
+            <div id="header-container" style="display: none">
                 <div class="header-inner">
                     <div id="hamburger" class="hamburger">
                         <div class="hamburger-inner">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="logo-black"><a href="<?php echo base_url(); ?>"></a></div>
                 </div>
-            </div> -->
+            </div>
             <?php } else { ?>
             <div id="header-container">
                 <div class="header-inner">
@@ -135,12 +135,12 @@
 
         <script data-main="<?php echo base_url();?>js/main" src="<?php echo base_url();?>js/vendor/require.min.js"></script>
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create',"<?php echo $this->config->item('ga_account');?>");ga('send','pageview');
-        // </script>
+            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            // e.src='//www.google-analytics.com/analytics.js';
+            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            // ga('create',"<?php echo $this->config->item('ga_account');?>");ga('send','pageview');
+        </script>
     </body>
 </html>

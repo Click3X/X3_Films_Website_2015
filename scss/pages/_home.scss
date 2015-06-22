@@ -21,14 +21,14 @@ div#home-page{
 
   	#home-header {
   		position: absolute;
-  		width:100%;
-		top:0;
-		background: transparent;
-		z-index:6;
-		@include clearfix();
+  // 		width:100%;
+		// top:0;
+		// background: transparent;
+		// z-index:6;
+		// @include clearfix();
   	}
 
-  	#header-container {
+  	#overlay-header-container {
   		border-top: 25px solid $cfmred;
   	}
 

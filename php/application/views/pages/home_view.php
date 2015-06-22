@@ -47,7 +47,7 @@
 	<!-- OVERLAY -->
 
 	<div class="video-overlay overlay-scale" id="featured-overlay-container">
-		<div id="header-container">
+		<div id="overlay-header-container">
 	        <div class="header-inner">
 	            <div class="hamburger">
 	                <div class="hamburger-inner">

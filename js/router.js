@@ -67,6 +67,11 @@ define([
       var _t = this;
 
       !_pageid ? _pageid = "home" : null;
+      if (_pageid != "home") {
+        $('#header-container').css('display', 'block');
+        console.log('page changed to: ' + _pageid);
+      }
+      
 
       $(document.documentElement).removeClass("menu-open");
       $(window).scrollTop(0);
